@@ -1,5 +1,5 @@
 /* ========================================
-   Lab 4: SEO Optimized Product Page - Script
+   Lab 4: SEO + Email Marketing - Script
    ======================================== */
 
 // ---- Add to Cart Button ----
@@ -19,7 +19,36 @@ if (addToCartBtn) {
 const buyNowBtn = document.getElementById('buyNowBtn');
 if (buyNowBtn) {
     buyNowBtn.addEventListener('click', () => {
-        alert('🛍️ Redirecting to checkout...\n\n(This is a demo page for SEO demonstration.)');
+        alert('🛍️ Redirecting to checkout...\n\n(This is a demo page.)');
+    });
+}
+
+// ---- Newsletter Signup Form ----
+const newsletterForm = document.getElementById('newsletterForm');
+const successMessage = document.getElementById('successMessage');
+
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('mcName').value.trim();
+        const email = document.getElementById('mcEmail').value.trim();
+
+        if (!name || !email) {
+            alert('Please fill in both your name and email!');
+            return;
+        }
+
+        // Hide form, show success message
+        document.querySelector('.newsletter-container').style.display = 'none';
+        successMessage.style.display = 'block';
+
+        // Log to console (in real Mailchimp, this data goes to their API)
+        console.log('=== New Subscriber ===');
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Time:', new Date().toLocaleString());
+        console.log('======================');
     });
 }
 

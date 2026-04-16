@@ -66,6 +66,7 @@
             <a href="index.html" class="logo">🛒 ShopEase</a>
             <nav aria-label="Main navigation">
                 <a href="#product" class="active">Home</a>
+                <a href="#newsletter">Newsletter</a>
                 <a href="#seo-info">SEO Info</a>
                 <a href="#reviews">Reviews</a>
             </nav>
@@ -157,6 +158,55 @@
                     </div>
                     <p>"Great value for money. Sound is clear, mic works well for office calls. Highly recommended!"</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- ✅ EMAIL MARKETING: Newsletter Signup Section (Mailchimp Integration) -->
+        <section class="newsletter-section" id="newsletter">
+            <h2>📬 Subscribe to Our Newsletter</h2>
+            <p class="subtitle">Get exclusive deals, new arrivals, and tips directly in your inbox!</p>
+
+            <div class="newsletter-container">
+                <div class="newsletter-benefits">
+                    <h3>Why Subscribe?</h3>
+                    <ul>
+                        <li>🎁 Get <strong>10% OFF</strong> on your first order</li>
+                        <li>🔔 Early access to sales & new products</li>
+                        <li>📦 Free shipping alerts</li>
+                        <li>❌ Unsubscribe anytime — no spam!</li>
+                    </ul>
+                </div>
+
+                <!-- 
+                    =============================================
+                    📌 MAILCHIMP SIGNUP FORM
+                    =============================================
+                    Replace the form below with your actual Mailchimp 
+                    embedded form code. To get it:
+                    1. Login to mailchimp.com
+                    2. Go to Audience → Signup Forms → Embedded Forms
+                    3. Copy the HTML code and paste it here
+                    =============================================
+                -->
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-group">
+                        <label for="mcName">Your Name</label>
+                        <input type="text" id="mcName" placeholder="e.g. Rahul Sharma" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mcEmail">Email Address</label>
+                        <input type="email" id="mcEmail" placeholder="e.g. rahul@gmail.com" required>
+                    </div>
+                    <button type="submit" class="btn-primary" id="subscribeBtn">✉️ Subscribe Now</button>
+                    <p class="form-note">🔒 We respect your privacy. Your data is safe with us.</p>
+                </form>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage" style="display:none;">
+                <div class="success-icon">✅</div>
+                <h3>You're Subscribed!</h3>
+                <p>Welcome to ShopEase! Check your inbox for a <strong>10% discount code</strong>.</p>
             </div>
         </section>
 
@@ -272,7 +322,7 @@
 
     <!-- ✅ SEO 18: Using <footer> semantic tag -->
     <footer>
-        <p>&copy; 2026 ShopEase. Lab Assignment 4 - SEO Optimized Product Page</p>
+        <p>&copy; 2026 ShopEase. Lab Assignment 4 - SEO + Email Marketing (Mailchimp)</p>
     </footer>
 
     <script src="script.js"></script>
